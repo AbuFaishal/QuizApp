@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.pcont{
+    width:100%;
+    height:100vh;
+    position: relative;
+    background-color: #96CDCD;
+}
+.pcont .quizdiv{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:50%;
+    height:fit-content;
+    padding:10px;
+    background-color: #2F4F4F;
+    border-radius:20px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    color:white;
+}
+.quizdiv .quiz{
+    width:100%;
+    padding:20px;
+}
+.quizdiv .quiz .counter{
+    position: absolute;
+    bottom:15px;
+    width:40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    background:white;
+    border-radius: 50%;
+    border:2px solid teal;
+    font-weight:bold;
+}
+.quizdiv .ans{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+.quizdiv .ans .but{
+    border:none;
+    width:80%;
+    background: none;
+    border:1px solid rgb(243, 243, 243);
+    margin:20px auto;
+    padding: 5px 0px;
+    border-radius: 10px;
+    font-weight: bold;
+    color:white;
+}
+.quizdiv .ans .but:hover{
+    background-color: #E0EEEE;
+    color:black;
+}
+.center{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*-----media query----*/
+@media screen and (max-width:990px) {
+    .quizdiv .quiz p{
+        font-size: 20px;
+    }
+    .but{
+        font-size: 14px;
+    }
+    .quizdiv .quiz .counter{
+        bottom:30px;
+    }
+}
+@media screen and (max-width:771px) {
+    .quizdiv .quiz p{
+        font-size: 18px;
+    }
+    .but{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:540px) {
+    .pcont .quizdiv{
+        flex-direction: column;
+    }
+    .quizdiv .quiz p{
+        font-size: 16px;
+    }
+    .but{
+        font-size: 10px;
+    }
+    .quizdiv .quiz .counter{
+        top:20px;
+        right:15px;
+    }
+    .pcont .quizdiv{
+        width:80%;
+    }
+}
